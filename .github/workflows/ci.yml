@@ -103,7 +103,7 @@ jobs:
           push: true
           context: builds
           file: builds/${{ inputs.dockerfile || env.DOCKERFILE }}
-          tags: ghcr.io/${{ env.PROJECT_NAMESPACE || github.repository }}/${{ inputs.image || env.IMAGE }}:${{ inputs.version || env.VERSION }},ghcr.io/${{ env.PROJECT_NAMESPACE || github.repository }}/${{ inputs.image || env.IMAGE }}:latest
+          tags: ghcr.io/${{ env.PROJECT_NAMESPACE || github.repository }}/${{ env.PROJECT_NAME }}/${{ inputs.image || env.IMAGE }}:${{ inputs.version || env.VERSION }},ghcr.io/${{ env.PROJECT_NAMESPACE || github.repository }}/${{ env.PROJECT_NAME }}/${{ inputs.image || env.IMAGE }}:latest
           build-args: |
             "FRAPPE_PATH=${{ inputs.frappe-repo || env.FRAPPE_REPO }}"
             "FRAPPE_BRANCH=${{ inputs.frappe-version || env.FRAPPE_VERSION }}"
