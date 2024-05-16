@@ -2,6 +2,7 @@ name: Build Image
 
 permissions:
   packages: write
+  contents: read
 
 on:
   push:
